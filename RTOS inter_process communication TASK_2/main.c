@@ -119,10 +119,10 @@ xSemaphoreGive(uart_free) ;
 		for (lc_u8_task1_loop=LOOP_INIT;lc_u8_task1_loop<LOOP_MAX ;lc_u8_task1_loop++)
 		{
 		vSerialPutString(lc_ch_task_1_string,STRING_SIZE);
-			vTaskDelay(TASK_DELAY);
+			//vTaskDelay(TASK_DELAY);
 		}
 		xSemaphoreGive(uart_free) ;
-		vTaskDelay(TASK_DELAY);
+		vTaskDelay(TASK_1_CYCLE );
 		
 	}
 	}
